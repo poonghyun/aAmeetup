@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AAmeetup</title>
+  <title>aAmeetup</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="header">
+    <% unless current_user.nil? %>
+      <input type="submit" name="" id="sign_out_button" value="Sign Out">
+      <%# button_to "Sign Out", session_url, method: "delete", form: { id: "sign_out_button" } %>
+      <%= link_to %>
+    <% end %>
+  </div>
+  <div id="content">
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <span id="errors"><%= error %></span>
+        <br />
+      <% end %>
+    <% end %>
 
-<% if current_user  %>
-  <%= button_to "Sign Out", session_url, method: :delete %>
-<% end %>
+    <%= yield %>
 
-<%= yield %>
+    <br />
+    <% if current_user %>
+      <%= link_to "View my profile", user_url(current_user.id) %>
+    <% end %>
 
+    <br />
+    <% unless current_user %>
+      <%= link_to "Login", new_session_url %>
+    <% end %>
+  </div>
 </body>
 </html>

@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-xbody * {
+bodyz * {
   border: solid;
   padding: 3px;
 }
@@ -26,7 +26,7 @@ body {
 #content {
   width: 75%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   background-color: white;
   border-radius: 20px;
 }
@@ -35,12 +35,18 @@ body {
   color: red;
 }
 
+#flash {
+  padding-top: 10px;
+}
+
 #header {
+  position: fixed;
   width: 100%;
-  height: 30px;
-  margin: -10px;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  margin: 0px;
   background-color: black;
-  position: absolute;
 }
 
 label {
@@ -52,22 +58,27 @@ label {
 }
 
 #sign_out_button {
-  color: black;
-  width: 150px;
-  height: 100px;
+  float:   right;
+  right:   0px;
+  margin:  0px;
+  color:   black;
+  height:  50px;
+
 }
-#sign_out_button:hover {
-  color: white;
-  width: 300px;
+
+#sign_out_buttons:hover {
+  color:  white;
+  width:  300px;
   height: 300px
 }
 
 #submit_button {
-  width: 125px;
+  width: 170px;
 }
 
 #submit_login {
   display: block;
-  padding: 2px;
+  padding: 6px;
+  border-radius: 0px;
   float: right;
 }

@@ -4,14 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_credentials(user_params[:username], user_params[:password])
+    @user = User.find_by_credentials(user_params[:name], user_params[:password])
 
     if @user
       login!(@user)
       redirect_to posts_url
     else
-      flash[:notices] = ["Invalid username/password combination"]
-      @user = User.new(username: user_params[:username])
+      flash[:notices] = ["Invalid name/password combination"]
+      @user = User.new(name: user_params[:name])
       render :new
     end
   end
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:name, :password)
   end
 
 end

@@ -1,0 +1,8 @@
+<% if flash[:notices] %>
+  <% flash[:notices].each do |notice| %>
+    <span id="errors"><%= notice %></span>
+    <br />
+  <% end %>
+<% end %>
+
+

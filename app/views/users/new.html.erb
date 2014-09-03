@@ -1,2 +1,7 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Register</h1>
+
+<%= render 'shared/login_form',
+  action_url:    users_url,
+  patch:         false,
+  submit_button: "Register",
+  verify:        true%>

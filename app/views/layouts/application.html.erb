@@ -11,17 +11,12 @@
     <% unless current_user.nil? %>
       <input type="submit" name="" id="sign_out_button" value="Sign Out">
       <%# button_to "Sign Out", session_url, method: "delete", form: { id: "sign_out_button" } %>
-      <%= link_to %>
     <% end %>
   </div>
   <div id="content">
-    <% if flash[:errors] %>
-      <% flash[:errors].each do |error| %>
-        <span id="errors"><%= error %></span>
-        <br />
-      <% end %>
-    <% end %>
-
+    <div id="flash">
+      <%= render 'shared/flash_notice' %>
+    </div>
     <%= yield %>
 
     <br />

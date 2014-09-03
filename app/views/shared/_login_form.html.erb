@@ -17,7 +17,14 @@
       name="user[password]" 
       id="user_password" 
        />
-
+  <% if verify  %>
+    <label for="verify">The two frameworks we're learning are:</label>
+    <input 
+      type="text" 
+      name="verify" 
+      id="" 
+      value="" />
+  <% end %>
   <div id="submit_button">
     <button id="submit_login" type="submit"><%= submit_button %></button>
   </div>

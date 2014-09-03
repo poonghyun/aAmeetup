@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def login!(user)
-    session[:token] = user.reset_session_token
+    session[:token] = user.reset_session_token!
   end
 
   def logout!

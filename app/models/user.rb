@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
   end
 
   def reset_session_token!
-    self.update(session_token: User.generate_token)
+    self.update!(session_token: User.generate_token)
     self.session_token
   end
 

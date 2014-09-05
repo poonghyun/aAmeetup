@@ -18,10 +18,10 @@
          </li>
        </ul>
      </div>
-    <%# if logged_in? %>
+    <% if current_user %>
       <button type="submit" name="" id="sign_out_button" value="Sign Out">Sign Out</button>
       <%# button_to "Sign Out", session_url, id: "sign_out_button", method: "delete" %>
-    <%# end %>
+    <% end %>
   </div>
   <div id="content">
     <div id="flash">

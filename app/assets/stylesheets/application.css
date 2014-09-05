@@ -91,6 +91,15 @@ li a {
   float: right;
 }
 
+.sign_out_button {
+  float:  right;
+  top:    0px;
+  right:  0px;
+  margin: 0px;
+  color:  white;
+  height: 50px;
+  color:  black;
+}
 #sign_out_button {
   float:  right;
   top:    0px;

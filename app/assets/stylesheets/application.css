@@ -14,21 +14,22 @@
  *= require_self
  */
 bodyz * {
-  border: solid;
+  border:  solid;
   padding: 3px;
 }
 
 body {
-  background: url('stage.jpg') no-repeat fixed;
+  background-color: #99FFFF;
+  backgrounds: url('stage.jpg') no-repeat fixed;
   size: cover;
 }
 
 #content {
-  width: 75%;
-  margin: 0 auto;
+  width:   75%;
+  margin:  0 auto;
   padding: 40px;
-  background-color: white;
   border-radius: 20px;
+  background-color: white;
 }
 
 #errors {
@@ -41,32 +42,66 @@ body {
 
 #header {
   position: fixed;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  height: 50px;
-  margin: 0px;
-  background-color: black;
+  width:    100%;
+  top:      0px;
+  left:     0px;
+  height:   50px;
+  margin:   0px;
+  background-color: #E80000;
 }
 
 label {
   display: block;
 }
 
+li a {
+  color: white;
+}
+.nav_link {
+  padding: 5px;
+  border-style: solid;
+  border-color: white;
+  height: 20px;
+  text-decoration: none;
+  displayz: inline-block;
+}
+
+.nav_link:hover, button:hover {
+  background: white;
+  color: black;
+}
+
+#nav_links {
+  display: inline;
+  list-style: none;
+}
+
+#nav_links li {
+  display: inline;
+}
+
+#nav_top {
+  float:   left;
+  margin:  auto;
+  padding: 15px;
+  top:     10px;
+  color:   white;
+}
 #registration.label {
   float: right;
 }
 
 #sign_out_button {
-  float:   right;
-  right:   0px;
-  margin:  0px;
-  color:   black;
-  height:  50px;
-
+  float:  right;
+  top:    0px;
+  right:  0px;
+  margin: 0px;
+  color:  white;
+  height: 50px;
+  color:  black;
 }
 
-#sign_out_buttons:hover {
+#sign_out_buttons {
   color:  white;
   width:  300px;
   height: 300px
@@ -77,8 +112,8 @@ label {
 }
 
 #submit_login {
-  display: block;
-  padding: 6px;
   border-radius: 0px;
-  float: right;
+  display:       block;
+  padding:       6px;
+  float:         right;
 }

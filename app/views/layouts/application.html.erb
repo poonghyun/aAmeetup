@@ -8,10 +8,20 @@
 </head>
 <body>
   <div id="header">
-    <% unless current_user.nil? %>
-      <input type="submit" name="" id="sign_out_button" value="Sign Out">
-      <%# button_to "Sign Out", session_url, method: "delete", form: { id: "sign_out_button" } %>
-    <% end %>
+     <div id="nav_top">
+       <ul id="nav_links">
+         <li>
+           <%= link_to "MessageBoard", chats_url, class: "nav_link"  %>
+         </li>
+         <li>
+         <%= link_to "Events", events_url, class: "nav_link"  %>
+         </li>
+       </ul>
+     </div>
+    <%# if logged_in? %>
+      <button type="submit" name="" id="sign_out_button" value="Sign Out">Sign Out</button>
+      <%# button_to "Sign Out", session_url, id: "sign_out_button", method: "delete" %>
+    <%# end %>
   </div>
   <div id="content">
     <div id="flash">
@@ -20,11 +30,12 @@
     <%= yield %>
 
     <br />
-    <% if current_user %>
+    <% if logged_in? %>
       <%= link_to "View my profile", user_url(current_user.id) %>
     <% end %>
 
     <br />
+
     <% unless current_user %>
       <%= link_to "Login", new_session_url %>
     <% end %>

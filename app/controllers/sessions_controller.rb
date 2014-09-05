@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @user
       login!(@user)
-      redirect_to posts_url
+      redirect_to events_url
     else
       flash[:notices] = ["Invalid name/password combination"]
       @user = User.new(name: user_params[:name])

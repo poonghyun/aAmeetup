@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 
 group :development do
-  gem 'better_errors'
+  gem 'better_errors', '~>1.1.0'
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'quiet_assets'

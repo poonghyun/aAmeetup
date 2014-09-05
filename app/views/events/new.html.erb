@@ -1,2 +1,11 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<h1>Add New Event</h1>
+<form action="<%= events_url %>" method="post" accept-charset="utf-8">
+  <label for="">Title</label>
+  <input type="text" name="event[title]" id="" value="" />
+
+  <label for="">Location</label>
+  <input type="text" name="event[location]" id="" value="" />
+  Description:<textarea name="event[description]" id= rows="8" cols="40"></textarea>
+  Date<input type="date" name="event[date]" id="" value="" />
+  <input type="text" name="event[time]" id="" value="" />
+</form>

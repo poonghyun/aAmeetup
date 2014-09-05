@@ -1,5 +1,6 @@
 <h1>Events</h1>
 <div id="event_board">
+  <%= link_to "Create New Event", new_event_url  %>
 
   <% @events.each do |event| %>
     <p><%= event.name %></p>
